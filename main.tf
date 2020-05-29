@@ -7,6 +7,7 @@ variable "compute_vm_hostname" {}
 // Modules
 
 provider "azurerm"{
+  version = "~>2.0"
   features {}
 }
 
