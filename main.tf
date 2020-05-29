@@ -1,3 +1,8 @@
+provider "azurerm" {
+  version = "=2.0.0"
+  features {}
+}
+
 //--------------------------------------------------------------------
 // Variables
 variable "compute_resource_group_name" {}
