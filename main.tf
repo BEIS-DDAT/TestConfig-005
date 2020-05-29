@@ -11,7 +11,7 @@ provider "azurerm"{
 }
 
 resource "azure_resource_group" "rg01" {
-  name = "${var.resource_group_name}
+  name = var.resource_group_name
   location = "UKSouth"
 }
 
@@ -22,7 +22,7 @@ module "compute" {
   nb_instances = 1
   nb_public_ip = 0
   resource_group_name = azure_resource_group.rg01.name
-  vm_hostname = "${var.compute_vm_hostname}"
+  vm_hostname = var.compute_vm_hostname
   vm_os_simple = "UbuntuServer"
   vnet_subnet_id = "${module.network.vnet_subnets[0]}"
 }
