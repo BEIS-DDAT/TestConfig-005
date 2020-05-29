@@ -10,6 +10,12 @@ variable "network_resource_group_name" {}
 
 //--------------------------------------------------------------------
 // Modules
+
+resource "azurerm_resource_group" "rg01" {
+  name     = "${var.compute_resource_group_name}"
+  location = "UKSouth"
+}
+
 module "compute" {
   source  = "tfe.ddat.team/DDAT/compute/azurerm"
   version = "3.2.0"
