@@ -12,7 +12,7 @@ variable "network_resource_group_name" {}
 // Modules
 
 resource "azurerm_resource_group" "rg01" {
-  name     = var.computer_resource_group_name
+  name     = var.compute_resource_group_name
   location = "UKSouth"
 }
 
