@@ -18,7 +18,7 @@ resource "azurerm_resource_group" "rg01" {
 
 module "compute" {
   source  = "tfe.ddat.team/DDAT/compute/azurerm"
-  version = "3.2.1"
+  version = "3.2.2"
 
   nb_instances = 1
   nb_public_ip = 0
